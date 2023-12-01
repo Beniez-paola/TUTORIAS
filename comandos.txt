@@ -1,0 +1,36 @@
+comandos para ejecutar node js(en una terminal)
+
+npm star // para ejecutar produccion
+
+npm run dev // para ejecutar en desarrollo
+
+ejecutar tailwind sin conexion a internet (en otra terminal)
+
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+Acceder a mongoBD se instala el mongoShell 
+
+comando mongosh // acceder a la bd 
+
+show dbs // ver bases de datos
+
+use  -nombre de la base -  
+
+show collectios  // muestra las tablas 
+
+db. - nombre tabla-.find() // muestra el contenido de esa tabla
+
+eliminar datos en el bd 
+
+> use mi_base_de_datos
+> db.usuarios.deleteOne({ nombre: "Juan" })
+
+eliminar una-tabla 
+
+> db.nombre_de_tu_coleccion.drop()
+
+ingresar datos en mongoShell
+
+> use nombre_de_tu_base_de_datos
+> db.nombre_de_tu_coleccion.insertOne({ campo1: valor1, campo2: valor2, ... })
+

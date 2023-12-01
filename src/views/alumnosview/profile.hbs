@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Agrega el enlace a Tailwind UI -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind-ui.min.css" rel="stylesheet">
+    <title>Perfil del Alumno</title>
+</head>
+<body class="bg-gray-200 font-sans">
+
+    <!-- Contenido Principal -->
+    <div class="container mx-auto p-8">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-6">Perfil del Alumno</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {{#each alumnos}}
+                <div>
+                    <label class="text-gray-600">Nombre:</label>
+                    <p id="nombreAlumno" class="font-semibold">{{Nombre}}</p>
+                </div>
+                <div>
+                    <label class="text-gray-600">Número de Control:</label>
+                    <p id="numeroControl" class="font-semibold">{{Numero_control}}</p>
+                </div>
+                <div>
+                    <label class="text-gray-600">Carrera:</label>
+                    <p id="carreraAlumno" class="font-semibold">{{carrera}}</p>
+                </div>
+                <div>
+                    <label class="text-gray-600">Semestre:</label>
+                    <p id="semestreAlumno" class="font-semibold">{{semestre}}</p>
+                </div>
+            </div>
+            {{/each}}
+
+            <div class="mt-8">
+                <!-- Sección de Servicio Social -->
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-900">Servicio Social</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="estadoSolicitud" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Estado de la Solicitud:</p>
+                        <p id="estadoSolicitudTexto" class="text-xl font-bold">Aprobada</p>
+                    </div>
+                    <div id="horasCompletadas" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Horas Completadas:</p>
+                        <p id="horasCompletadasTexto" class="text-xl font-bold">80 horas</p>
+                    </div>
+                    <div id="horasRestantes" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Horas Restantes:</p>
+                        <p id="horasRestantesTexto" class="text-xl font-bold">40 horas</p>
+                    </div>
+                </div>
+                <div id="detallesServicioSocial" class="mt-6 bg-indigo-500 p-8 rounded-lg shadow-md text-white">
+                    <h4 class="text-xl font-semibold mb-4">Detalles del Servicio Social</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-lg font-semibold">Fecha de Inicio:</p>
+                            <p id="fechaInicio" class="text-xl">01/08/2023</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold">Fecha de Finalización:</p>
+                            <p id="fechaFinalizacion" class="text-xl">30/11/2023</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="text-lg font-semibold">Institución o Empresa:</p>
+                            <p id="institucionEmpresa" class="text-xl">Fundación XYZ</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="text-lg font-semibold">Coordinador o Supervisor:</p>
+                            <p id="coordinadorSupervisor" class="text-xl">Ana Rodríguez</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <!-- Sección de Residencia -->
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-900">Residencia</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="estadoResidencia" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Estado de la Residencia:</p>
+                        <p id="estadoResidenciaTexto" class="text-xl font-bold">Aprobada</p>
+                    </div>
+                    <div id="duracionResidencia" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Duración:</p>
+                        <p id="duracionResidenciaTexto" class="text-xl font-bold">6 meses</p>
+                    </div>
+                    <div class="col-span-2 bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Lugar de Residencia:</p>
+                        <p id="lugarResidenciaTexto" class="text-xl font-bold">Ciudad Universitaria</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <!-- Sección de Créditos Complementarios -->
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-900">Créditos Complementarios</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="creditosCompletados" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Créditos Completados:</p>
+                        <p id="creditosCompletadosTexto" class="text-xl font-bold">30 créditos</p>
+                    </div>
+                    <div id="creditosRestantes" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Créditos Restantes:</p>
+                        <p id="creditosRestantesTexto" class="text-xl font-bold">10 créditos</p>
+                    </div>
+                    <div class="col-span-2 bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Total de Créditos Necesarios:</p>
+                        <p id="totalCreditosNecesariosTexto" class="text-xl font-bold">40 créditos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <!-- Sección de Tutorías -->
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-900">Tutorías</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div id="totalSesiones" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Total de Sesiones:</p>
+                        <p id="totalSesionesTexto" class="text-xl font-bold">20 sesiones</p>
+                    </div>
+                    <div id="sesionesCompletadas" class="bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Sesiones Completadas:</p>
+                        <p id="sesionesCompletadasTexto" class="text-xl font-bold">15 sesiones</p>
+                    </div>
+                    <div class="col-span-2 bg-indigo-500 p-6 rounded-lg shadow-md text-white">
+                        <p class="text-lg font-semibold">Sesiones Restantes:</p>
+                        <p id="sesionesRestantesTexto" class="text-xl font-bold">5 sesiones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-blue-500 text-white py-4 mt-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="hover:text-gray-300">Inicio</a>
+                <a href="#" class="hover:text-gray-300">Servicios</a>
+                <a href="#" class="hover:text-gray-300">Acerca de</a>
+                <a href="#" class="hover:text-gray-300">Contacto</a>
+            </nav>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-gray-300">Política de Privacidad</a>
+                <a href="#" class="hover:text-gray-300">Términos y Condiciones</a>
+                <a href="#" class="hover:text-gray-300">Ayuda</a>
+            </div>
+            <p class="text-sm">&copy; 2023 Universidad XYZ</p>
+        </div>
+    </footer>
+</body>
+</html>

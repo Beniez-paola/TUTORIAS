@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Agrega el enlace a Tailwind UI -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind-ui.min.css" rel="stylesheet">
+    <title>Alumnos</title>
+</head>
+<body class="bg-gray-200 font-sans">
+    <!-- Contenido Principal -->
+    <div class="container mx-auto p-8">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-6">Perfiles de Alumnos</h2>
+            <a href="/alumno/add" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mb-4 rounded">
+                Agregar
+            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Se utilizo esta variable de handlebars(todo lo demas si es el diseño de tailwind) #each para mandar llamar lo que tenemos en la bd sin necesitar un script de java -->
+                {{#each alumnos}}
+        <div class="mb-4">
+            <p class="text-lg font-semibold">{{Nombre}}</p>
+            <p class="text-gray-600" >{{Numero_control}}</p>
+            <p class="text-gray-600">{{semestre}}</p>
+            <p class="text-gray-600">{{carrera}}</p>
+
+            <!-- Botones de editar y eliminar -->
+            <div class="flex mt-2">
+                <a href="/alumno/{{_id}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded">
+                    Editar
+                </a>
+                <form action="/alumno/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    Eliminar
+                </button>
+                </form>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</body>
+</html>
