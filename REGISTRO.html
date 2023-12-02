@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-xl">
+        <div class="text-center mb-6">
+            <h3 class="text-4xl font-extrabold text-gray-900">Registro</h3>
+            <p class="text-gray-700">Llena los siguientes datos</p>
+        </div>
+        <!-- Formulario de registro -->
+        <form class="w-full max-w-2xl mx-auto">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="NOMreg">
+                        Nombre Completo
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="NOMreg" type="text" placeholder="Inicia por Apellidos">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="NCreg">
+                        Número de Control
+                    </label>
+                    <input class="mb-3 appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="NCreg" type="text" placeholder="Número de Control">
+                </div>
+                
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="CORREO">
+                        Correo Institucional
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="Correoreg" type="text" placeholder="Tectijuana">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Avance">
+                        Avance Reticular
+                    </label>
+                    <input class="mb-3 appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="Avancereg" type="text" placeholder="Ejemplo(70)">
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Semestre">
+                        Semestre
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="Semreg" type="text" placeholder="Ejemplo(8)">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Carrera">
+                        Carrera
+                    </label>
+                    <input class="mb-3 appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="Carrerareg" type="text" placeholder="Carrera">
+                </div>
+                
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Contraseña">
+                        Contraseña
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="CONreg" type="password" placeholder="Contraseña">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Verificar Contraseña">
+                        Verificar Contraseña
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="VCONreg" type="password" placeholder="Verificar Contraseña">
+                </div>
+                
+
+            </div>
+
+            <!-- Boton registro -->
+
+            <div class="flex justify-center mt-6">
+                <button class="w-full bg-purple-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-purple-500" type="submit">
+                    Registrarte
+                </button>
+            </div>
+              <!-- Botón de inicio de sesión -->
+              <p class="text-sm leading-relaxed text-grey-900 text-center mb-1">¿Ya tienes cuenta? <a href="javascript:void(0)" class="font-bold text-grey-700">Inicia Sesión</a></p>
+        </form>
+    </div>
+</body>
+</html>
